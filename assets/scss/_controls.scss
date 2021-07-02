@@ -1,0 +1,63 @@
+.controls {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.control-pause,
+.control-prev,
+.control-next {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control-next {
+  right: 0;
+  width: 10%;
+
+  &:hover,
+  &:focus {
+    text-shadow: 0 0 10px $color-white;
+  }
+}
+
+.control-prev {
+  left: 0;
+  width: 10%;
+
+  &:hover,
+  &:focus {
+    text-shadow: 0 0 10px $color-white;
+  }
+}
+
+.fa-angle-left,
+.fa-angle-right {
+  color: rgba($color-white, 0.4);
+  font-size: 50px;
+}
+
+.control-pause {
+  top: calc(50% - 10vh);
+  left: calc(50% - 10vh);
+  height: 0;
+  padding: 0;
+
+  .fa-play-circle,
+  .fa-pause-circle {
+    position: absolute;
+    display: block;
+    transform: translate(50%, 50%);
+    color: rgba($color-white, 0.2);
+    font-size: 20vh;
+  }
+
+  .fa-play-circle {
+    color: rgba($color-white, 0.5);
+  }
+}
